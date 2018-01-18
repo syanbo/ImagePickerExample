@@ -70,12 +70,29 @@ export default class App extends Component<{}> {
             })
     };
 
+    handleLaunchCamera = () => {
+        SYImagePicker.openCamera({isCrop: false, showCropCircle: true, showCropFrame: false},(err, photos) =>{
+            console.log(err, photos);
+            if (!err) {
+                this.setState({
+                    photos: [...this.state.photos, ...photos]
+                })
+            }
+        })
+    };
+
     render() {
 
         const {photos} = this.state;
 
         return (
             <View style={styles.container}>
+                <TouchableOpacity
+                    style={styles.btn}
+                    onPress={this.handleLaunchCamera}
+                >
+                    <Text style={{color: '#fff', fontSize: 16}}>拍照</Text>
+                </TouchableOpacity>
                 <TouchableOpacity
                     style={styles.btn}
                     onPress={this.handleOpenImagePicker}
