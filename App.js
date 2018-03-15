@@ -16,7 +16,6 @@ import {
 } from 'react-native';
 
 import SYImagePicker from 'react-native-syan-image-picker'
-
 const {width} = Dimensions.get('window');
 
 export default class App extends Component<{}> {
@@ -39,11 +38,11 @@ export default class App extends Component<{}> {
         })
     };
 
-    // 以Promise形式调用
-    // 相册参数暂时只支持默认参数中罗列的属性；
-    // 使用方式
-    // sync/await
-
+    /**
+     * 使用方式sync/await
+     * 相册参数暂时只支持默认参数中罗列的属性；
+     * @returns {Promise<void>}
+     */
     handleAsyncSelectPhoto = async () => {
         try {
             const photos = await SYImagePicker.asyncShowImagePicker({imageCount: 3});
@@ -56,7 +55,6 @@ export default class App extends Component<{}> {
         }
     };
 
-    // promise形式
     handlePromiseSelectPhoto = () => {
         SYImagePicker.asyncShowImagePicker({imageCount: 3})
             .then(photos => {
@@ -71,7 +69,7 @@ export default class App extends Component<{}> {
     };
 
     handleLaunchCamera = () => {
-        SYImagePicker.openCamera({isCrop: false, showCropCircle: true, showCropFrame: false},(err, photos) =>{
+        SYImagePicker.openCamera({isCrop: true, showCropCircle: true, showCropFrame: false}, (err, photos) => {
             console.log(err, photos);
             if (!err) {
                 this.setState({
@@ -81,43 +79,28 @@ export default class App extends Component<{}> {
         })
     };
 
+    handleDeleteCache = () => {
+        SYImagePicker.deleteCache()
+    };
+
     render() {
 
         const {photos} = this.state;
-
         return (
             <View style={styles.container}>
-                <TouchableOpacity
-                    style={styles.btn}
-                    onPress={this.handleLaunchCamera}
-                >
-                    <Text style={{color: '#fff', fontSize: 16}}>拍照</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btn}
-                    onPress={this.handleOpenImagePicker}
-                >
-                    <Text style={{color: '#fff', fontSize: 16}}>选择照片</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btn}
-                    onPress={this.handleAsyncSelectPhoto}
-                >
-                    <Text style={{color: '#fff', fontSize: 16}}>选择照片(Async)</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.btn}
-                    onPress={this.handlePromiseSelectPhoto}
-                >
-                    <Text style={{color: '#fff', fontSize: 16}}>选择照片(Promise)</Text>
-                </TouchableOpacity>
+                <Button title={'拍照'} onPress={this.handleLaunchCamera}/>
+                <Button title={'选择照片'} onPress={this.handleOpenImagePicker}/>
+                <Button title={'选择照片(Async)'} onPress={this.handleAsyncSelectPhoto}/>
+                <Button title={'选择照片(Promise)'} onPress={this.handlePromiseSelectPhoto}/>
+                <Button title={'缓存清除'} onPress={this.handleDeleteCache}/>
                 <ScrollView style={{flex: 1}} contentContainerStyle={styles.scroll}>
                     {photos.map((photo, index) => {
+                        let source = { uri: 'data:image/jpeg;base64,' + photo.base64 };
                         return (
                             <Image
                                 key={`image-${index}`}
                                 style={styles.image}
-                                source={{uri: photo.uri}}
+                                source={source}
                                 resizeMode={"contain"}
                             />
                         )
@@ -127,6 +110,17 @@ export default class App extends Component<{}> {
         );
     }
 }
+
+const Button = ({title, onPress}) => {
+    return (
+        <TouchableOpacity
+            style={styles.btn}
+            onPress={onPress}
+        >
+            <Text style={{color: '#fff', fontSize: 16}}>{title}</Text>
+        </TouchableOpacity>
+    )
+};
 
 const styles = StyleSheet.create({
     container: {

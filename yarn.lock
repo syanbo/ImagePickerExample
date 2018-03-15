@@ -3347,9 +3347,9 @@ react-devtools-core@^2.5.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
-react-native-syan-image-picker@^0.0.9:
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/react-native-syan-image-picker/-/react-native-syan-image-picker-0.0.9.tgz#c8043c9af4c78345f1d6f371192b2a7f2a107e48"
+react-native-syan-image-picker@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-syan-image-picker/-/react-native-syan-image-picker-0.1.2.tgz#bc09af01766124a82e6a9d929b9cbb4adede9e77"
 
 react-native@0.49.3:
   version "0.49.3"
