@@ -56,11 +56,14 @@ export default class App extends Component<{}> {
     };
 
     handlePromiseSelectPhoto = () => {
-        SYImagePicker.asyncShowImagePicker({imageCount: 3})
+        SYImagePicker.asyncShowImagePicker({imageCount: 3, enableBase64: true})
             .then(photos => {
+                const arr = photos.map(v=>{
+                    return { ...v, enableBase64:true}
+                });
                 // 选择成功
                 this.setState({
-                    photos: [...this.state.photos, ...photos]
+                    photos: [...this.state.photos, ...arr]
                 })
             })
             .catch(err => {
@@ -91,11 +94,14 @@ export default class App extends Component<{}> {
                 <Button title={'拍照'} onPress={this.handleLaunchCamera}/>
                 <Button title={'选择照片'} onPress={this.handleOpenImagePicker}/>
                 <Button title={'选择照片(Async)'} onPress={this.handleAsyncSelectPhoto}/>
-                <Button title={'选择照片(Promise)'} onPress={this.handlePromiseSelectPhoto}/>
+                <Button title={'选择照片(Promise)带base64'} onPress={this.handlePromiseSelectPhoto}/>
                 <Button title={'缓存清除'} onPress={this.handleDeleteCache}/>
                 <ScrollView style={{flex: 1}} contentContainerStyle={styles.scroll}>
                     {photos.map((photo, index) => {
-                        let source = { uri: 'data:image/jpeg;base64,' + photo.base64 };
+                        let source = { uri: photo.uri };
+                        if (photo.enableBase64) {
+                            source = { uri: photo.base64 };
+                        }
                         return (
                             <Image
                                 key={`image-${index}`}
