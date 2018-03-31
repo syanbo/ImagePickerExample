@@ -92,11 +92,13 @@ export default class App extends Component<{}> {
         const {photos} = this.state;
         return (
             <View style={styles.container}>
-                <Button title={'拍照'} onPress={this.handleLaunchCamera}/>
-                <Button title={'选择照片'} onPress={this.handleOpenImagePicker}/>
-                <Button title={'选择照片(Async)'} onPress={this.handleAsyncSelectPhoto}/>
-                <Button title={'选择照片(Promise)带base64'} onPress={this.handlePromiseSelectPhoto}/>
-                <Button title={'缓存清除'} onPress={this.handleDeleteCache}/>
+                <View style={styles.scroll}>
+                    <Button title={'拍照'} onPress={this.handleLaunchCamera}/>
+                    <Button title={'选择照片'} onPress={this.handleOpenImagePicker}/>
+                    <Button title={'选择照片(Async)'} onPress={this.handleAsyncSelectPhoto}/>
+                    <Button title={'选择照片(Promise)带base64'} onPress={this.handlePromiseSelectPhoto}/>
+                    <Button title={'缓存清除'} onPress={this.handleDeleteCache}/>
+                </View>
                 <ScrollView style={{flex: 1}} contentContainerStyle={styles.scroll}>
                     {photos.map((photo, index) => {
                         let source = { uri: photo.uri };
@@ -133,16 +135,19 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#F5FCFF',
+        paddingTop: 40
     },
     btn: {
         backgroundColor: '#FDA549',
         justifyContent: 'center',
         alignItems: 'center',
         height: 44,
-        marginTop: 20
+        paddingHorizontal: 12,
+        margin: 5,
+        borderRadius: 22
     },
     scroll: {
-        padding: 10,
+        padding: 5,
         flexWrap: 'wrap',
         flexDirection: 'row'
     },
