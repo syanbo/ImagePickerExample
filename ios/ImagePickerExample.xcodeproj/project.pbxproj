@@ -20,11 +20,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		2345569E1F95E5930042E9F9 /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2345569D1F95E5930042E9F9 /* TZImagePickerController.bundle */; };
-		533BD25361C84A378DC6A04E /* libRNSyanImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4173BC9B8407415E9AD06CAD /* libRNSyanImagePicker.a */; };
+		1F945B5871914965B20B89A1 /* libRNSyanImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D12998CE52A545BABE0C1A8B /* libRNSyanImagePicker.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		B8EE60A9206F47AD0022129A /* TZImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B8EE60A8206F47AD0022129A /* TZImagePickerController.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,33 +84,26 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
-		2345566F1F95A4170042E9F9 /* PBXContainerItemProxy */ = {
+		2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = ADD01A681E09402E00F6D226;
 			remoteInfo = "RCTBlob-tvOS";
 		};
-		234556811F95A4170042E9F9 /* PBXContainerItemProxy */ = {
+		2D16E6831FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3DBE0D001F3B181A0099AA32;
 			remoteInfo = fishhook;
 		};
-		234556831F95A4170042E9F9 /* PBXContainerItemProxy */ = {
+		2D16E6851FA4F8DC00B85C8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3DBE0D0D1F3B181C0099AA32;
 			remoteInfo = "fishhook-tvOS";
-		};
-		234556861F95A4170042E9F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 438681B7E3884F3787B701C1 /* RNSyanImagePicker.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNSyanImagePicker;
 		};
 		3DAD3E831DF850E9000B6D8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -238,33 +231,68 @@
 			remoteGlobalIDString = 358F4ED71D1E81A9004DF814;
 			remoteInfo = RCTBlob;
 		};
-		B8C6E47C20104E9D000E9582 /* PBXContainerItemProxy */ = {
+		B8EE6098206F47350022129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BDC1FC498900052F4D5;
+			remoteInfo = jsinspector;
+		};
+		B8EE609A206F47350022129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EBF21BFA1FC4989A0052F4D5;
+			remoteInfo = "jsinspector-tvOS";
+		};
+		B8EE609C206F47350022129A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 139D7ECE1E25DB7D00323FB7;
 			remoteInfo = "third-party";
 		};
-		B8C6E47E20104E9D000E9582 /* PBXContainerItemProxy */ = {
+		B8EE609E206F47350022129A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D3C1EBD27B6005632C8;
 			remoteInfo = "third-party-tvOS";
 		};
-		B8C6E48020104E9D000E9582 /* PBXContainerItemProxy */ = {
+		B8EE60A0206F47350022129A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 139D7E881E25C6D100323FB7;
 			remoteInfo = "double-conversion";
 		};
-		B8C6E48220104E9D000E9582 /* PBXContainerItemProxy */ = {
+		B8EE60A2206F47350022129A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3D383D621EBD27B9005632C8;
 			remoteInfo = "double-conversion-tvOS";
+		};
+		B8EE60A4206F47350022129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F3131F5F2E4B0010BF04;
+			remoteInfo = privatedata;
+		};
+		B8EE60A6206F47350022129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9936F32F1F5F2E5B0010BF04;
+			remoteInfo = "privatedata-tvOS";
+		};
+		B8EE60F7206F4B1E0022129A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9DA900EA8C18449A9ED49D67 /* RNSyanImagePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNSyanImagePicker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -275,8 +303,6 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ImagePickerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerExampleTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* ImagePickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImagePickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,13 +313,15 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ImagePickerExample/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImagePickerExample/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		2345569D1F95E5930042E9F9 /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TZImagePickerController.bundle; sourceTree = "<group>"; };
-		4173BC9B8407415E9AD06CAD /* libRNSyanImagePicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSyanImagePicker.a; sourceTree = "<group>"; };
-		438681B7E3884F3787B701C1 /* RNSyanImagePicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSyanImagePicker.xcodeproj; path = "../node_modules/react-native-syan-image-picker/ios/RNSyanImagePicker.xcodeproj"; sourceTree = "<group>"; };
+		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9DA900EA8C18449A9ED49D67 /* RNSyanImagePicker.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNSyanImagePicker.xcodeproj; path = "../node_modules/react-native-syan-image-picker/ios/RNSyanImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
+		B8EE60A8206F47AD0022129A /* TZImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TZImagePickerController.bundle; path = "../node_modules/react-native-syan-image-picker/ios/TZImagePickerController/TZImagePickerController.bundle"; sourceTree = "<group>"; };
+		B8EE60F9206F4B560022129A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		D12998CE52A545BABE0C1A8B /* libRNSyanImagePicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNSyanImagePicker.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,7 +342,7 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				533BD25361C84A378DC6A04E /* libRNSyanImagePicker.a in Frameworks */,
+				1F945B5871914965B20B89A1 /* libRNSyanImagePicker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,23 +391,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* ImagePickerExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F21AD99517003FC87E /* ImagePickerExampleTests.m */,
-				00E356F01AD99517003FC87E /* Supporting Files */,
-			);
-			path = ImagePickerExampleTests;
-			sourceTree = "<group>";
-		};
-		00E356F01AD99517003FC87E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				00E356F11AD99517003FC87E /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,8 +405,8 @@
 			children = (
 				139FDEF41B06529B00C62182 /* libRCTWebSocket.a */,
 				3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */,
-				234556821F95A4170042E9F9 /* libfishhook.a */,
-				234556841F95A4170042E9F9 /* libfishhook-tvOS.a */,
+				2D16E6841FA4F8DC00B85C8A /* libfishhook.a */,
+				2D16E6861FA4F8DC00B85C8A /* libfishhook-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -425,20 +436,24 @@
 				3DAD3EAB1DF850E9000B6D8A /* libcxxreact.a */,
 				3DAD3EAD1DF850E9000B6D8A /* libjschelpers.a */,
 				3DAD3EAF1DF850E9000B6D8A /* libjschelpers.a */,
-				B8C6E47D20104E9D000E9582 /* libthird-party.a */,
-				B8C6E47F20104E9D000E9582 /* libthird-party.a */,
-				B8C6E48120104E9D000E9582 /* libdouble-conversion.a */,
-				B8C6E48320104E9D000E9582 /* libdouble-conversion.a */,
+				B8EE6099206F47350022129A /* libjsinspector.a */,
+				B8EE609B206F47350022129A /* libjsinspector-tvOS.a */,
+				B8EE609D206F47350022129A /* libthird-party.a */,
+				B8EE609F206F47350022129A /* libthird-party.a */,
+				B8EE60A1206F47350022129A /* libdouble-conversion.a */,
+				B8EE60A3206F47350022129A /* libdouble-conversion.a */,
+				B8EE60A5206F47350022129A /* libprivatedata.a */,
+				B8EE60A7206F47350022129A /* libprivatedata-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		234556681F95A4170042E9F9 /* Products */ = {
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				234556871F95A4170042E9F9 /* libRNSyanImagePicker.a */,
+				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -474,7 +489,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				438681B7E3884F3787B701C1 /* RNSyanImagePicker.xcodeproj */,
+				9DA900EA8C18449A9ED49D67 /* RNSyanImagePicker.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -491,12 +506,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				2345569D1F95E5930042E9F9 /* TZImagePickerController.bundle */,
+				B8EE60A8206F47AD0022129A /* TZImagePickerController.bundle */,
 				13B07FAE1A68108700A75B9A /* ImagePickerExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ImagePickerExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				B8C6E45A20104E9C000E9582 /* Recovered References */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				B8EE60CE206F4B1D0022129A /* Recovered References */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -515,17 +530,25 @@
 			isa = PBXGroup;
 			children = (
 				ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */,
-				234556701F95A4170042E9F9 /* libRCTBlob-tvOS.a */,
+				2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B8C6E45A20104E9C000E9582 /* Recovered References */ = {
+		B8EE60CE206F4B1D0022129A /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				4173BC9B8407415E9AD06CAD /* libRNSyanImagePicker.a */,
+				D12998CE52A545BABE0C1A8B /* libRNSyanImagePicker.a */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		B8EE60F4206F4B1E0022129A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE60F8206F4B1E0022129A /* libRNSyanImagePicker.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -624,8 +647,8 @@
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
 				{
-					ProductGroup = 234556681F95A4170042E9F9 /* Products */;
-					ProjectRef = 438681B7E3884F3787B701C1 /* RNSyanImagePicker.xcodeproj */;
+					ProductGroup = B8EE60F4206F4B1E0022129A /* Products */;
+					ProjectRef = 9DA900EA8C18449A9ED49D67 /* RNSyanImagePicker.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -692,32 +715,25 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		234556701F95A4170042E9F9 /* libRCTBlob-tvOS.a */ = {
+		2D16E6721FA4F8DC00B85C8A /* libRCTBlob-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libRCTBlob-tvOS.a";
-			remoteRef = 2345566F1F95A4170042E9F9 /* PBXContainerItemProxy */;
+			remoteRef = 2D16E6711FA4F8DC00B85C8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		234556821F95A4170042E9F9 /* libfishhook.a */ = {
+		2D16E6841FA4F8DC00B85C8A /* libfishhook.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libfishhook.a;
-			remoteRef = 234556811F95A4170042E9F9 /* PBXContainerItemProxy */;
+			remoteRef = 2D16E6831FA4F8DC00B85C8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		234556841F95A4170042E9F9 /* libfishhook-tvOS.a */ = {
+		2D16E6861FA4F8DC00B85C8A /* libfishhook-tvOS.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libfishhook-tvOS.a";
-			remoteRef = 234556831F95A4170042E9F9 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		234556871F95A4170042E9F9 /* libRNSyanImagePicker.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNSyanImagePicker.a;
-			remoteRef = 234556861F95A4170042E9F9 /* PBXContainerItemProxy */;
+			remoteRef = 2D16E6851FA4F8DC00B85C8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
@@ -846,32 +862,67 @@
 			remoteRef = ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8C6E47D20104E9D000E9582 /* libthird-party.a */ = {
+		B8EE6099206F47350022129A /* libjsinspector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libjsinspector.a;
+			remoteRef = B8EE6098206F47350022129A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8EE609B206F47350022129A /* libjsinspector-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libjsinspector-tvOS.a";
+			remoteRef = B8EE609A206F47350022129A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8EE609D206F47350022129A /* libthird-party.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libthird-party.a";
-			remoteRef = B8C6E47C20104E9D000E9582 /* PBXContainerItemProxy */;
+			remoteRef = B8EE609C206F47350022129A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8C6E47F20104E9D000E9582 /* libthird-party.a */ = {
+		B8EE609F206F47350022129A /* libthird-party.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libthird-party.a";
-			remoteRef = B8C6E47E20104E9D000E9582 /* PBXContainerItemProxy */;
+			remoteRef = B8EE609E206F47350022129A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8C6E48120104E9D000E9582 /* libdouble-conversion.a */ = {
+		B8EE60A1206F47350022129A /* libdouble-conversion.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libdouble-conversion.a";
-			remoteRef = B8C6E48020104E9D000E9582 /* PBXContainerItemProxy */;
+			remoteRef = B8EE60A0206F47350022129A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B8C6E48320104E9D000E9582 /* libdouble-conversion.a */ = {
+		B8EE60A3206F47350022129A /* libdouble-conversion.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = "libdouble-conversion.a";
-			remoteRef = B8C6E48220104E9D000E9582 /* PBXContainerItemProxy */;
+			remoteRef = B8EE60A2206F47350022129A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8EE60A5206F47350022129A /* libprivatedata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libprivatedata.a;
+			remoteRef = B8EE60A4206F47350022129A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8EE60A7206F47350022129A /* libprivatedata-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprivatedata-tvOS.a";
+			remoteRef = B8EE60A6206F47350022129A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B8EE60F8206F4B1E0022129A /* libRNSyanImagePicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNSyanImagePicker.a;
+			remoteRef = B8EE60F7206F4B1E0022129A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -881,7 +932,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2345569E1F95E5930042E9F9 /* TZImagePickerController.bundle in Resources */,
+				B8EE60A9206F47AD0022129A /* TZImagePickerController.bundle in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
@@ -923,6 +974,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				13B07FB21A68108700A75B9A /* Base */,
+				B8EE60F9206F4B560022129A /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			path = ImagePickerExample;
@@ -941,10 +993,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-syan-image-picker/ios/**",
-					"\"$(SRCROOT)/../node_modules/react-native/React\"",
 				);
 				INFOPLIST_FILE = ImagePickerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ImagePickerExample\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -964,10 +1019,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-syan-image-picker/ios/**",
-					"\"$(SRCROOT)/../node_modules/react-native/React\"",
 				);
 				INFOPLIST_FILE = ImagePickerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ImagePickerExample\"",
+				);
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -982,6 +1040,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1023,6 +1082,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

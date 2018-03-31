@@ -58,6 +58,7 @@ export default class App extends Component<{}> {
     handlePromiseSelectPhoto = () => {
         SYImagePicker.asyncShowImagePicker({imageCount: 3, enableBase64: true})
             .then(photos => {
+                console.log(photos);
                 const arr = photos.map(v=>{
                     return { ...v, enableBase64:true}
                 });
