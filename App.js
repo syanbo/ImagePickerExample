@@ -28,11 +28,11 @@ export default class App extends Component<{}> {
     }
 
     handleOpenImagePicker = () => {
-        SYImagePicker.showImagePicker({imageCount: 9}, (err, photos) => {
+        SYImagePicker.showImagePicker({imageCount: 9, isRecordSelected: true}, (err, photos) => {
             console.log(err, photos);
             if (!err) {
                 this.setState({
-                    photos: [...this.state.photos, ...photos]
+                    photos
                 })
             }
         })
@@ -44,8 +44,9 @@ export default class App extends Component<{}> {
      * @returns {Promise<void>}
      */
     handleAsyncSelectPhoto = async () => {
+        SYImagePicker.removeAllPhoto()
         try {
-            const photos = await SYImagePicker.asyncShowImagePicker({imageCount: 3});
+            const photos = await SYImagePicker.asyncShowImagePicker({imageCount: 1, isCrop: true, showCropCircle: true});
             // 选择成功
             this.setState({
                 photos: [...this.state.photos, ...photos]
