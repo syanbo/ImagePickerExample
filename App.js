@@ -16,6 +16,7 @@ import {
 } from 'react-native';
 
 import SYImagePicker from 'react-native-syan-image-picker'
+
 const {width} = Dimensions.get('window');
 
 export default class App extends Component<{}> {
@@ -28,7 +29,7 @@ export default class App extends Component<{}> {
     }
 
     handleOpenImagePicker = () => {
-        SYImagePicker.showImagePicker({imageCount: 9, isRecordSelected: true}, (err, photos) => {
+        SYImagePicker.showImagePicker({imageCount: 1, isRecordSelected: true, isCrop: true, showCropCircle: true}, (err, photos) => {
             console.log(err, photos);
             if (!err) {
                 this.setState({
@@ -46,7 +47,11 @@ export default class App extends Component<{}> {
     handleAsyncSelectPhoto = async () => {
         SYImagePicker.removeAllPhoto()
         try {
-            const photos = await SYImagePicker.asyncShowImagePicker({imageCount: 1, isCrop: true, showCropCircle: true});
+            const photos = await SYImagePicker.asyncShowImagePicker({
+                imageCount: 1,
+                isCrop: true,
+                showCropCircle: true
+            });
             // 选择成功
             this.setState({
                 photos: [...this.state.photos, ...photos]
@@ -60,8 +65,8 @@ export default class App extends Component<{}> {
         SYImagePicker.asyncShowImagePicker({imageCount: 3, enableBase64: true})
             .then(photos => {
                 console.log(photos);
-                const arr = photos.map(v=>{
-                    return { ...v, enableBase64:true}
+                const arr = photos.map(v => {
+                    return {...v, enableBase64: true}
                 });
                 // 选择成功
                 this.setState({
@@ -102,9 +107,9 @@ export default class App extends Component<{}> {
                 </View>
                 <ScrollView style={{flex: 1}} contentContainerStyle={styles.scroll}>
                     {photos.map((photo, index) => {
-                        let source = { uri: photo.uri };
+                        let source = {uri: photo.uri};
                         if (photo.enableBase64) {
-                            source = { uri: photo.base64 };
+                            source = {uri: photo.base64};
                         }
                         return (
                             <Image
