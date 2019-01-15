@@ -4622,10 +4622,10 @@ react-is@^16.6.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.3.tgz#d2d7462fcfcbe6ec0da56ad69047e47e56e7eac0"
   integrity sha512-u7FDWtthB4rWibG/+mFbVd5FvdI20yde86qKGx4lVUTWmPlSWQ4QxbBIrrs+HnXGbxOUlUzTAP/VDmvCwaP2yA==
 
-react-native-syan-image-picker@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/react-native-syan-image-picker/-/react-native-syan-image-picker-0.2.2.tgz#f858e230dda3ebdf54eebedf586b00bb86697342"
-  integrity sha512-Yrat+upoItfKRnw8VOo8tP5hGkGVNEwi8Za13vQbwi2CKLmm6P7BZPk4J2WKIXSur87j675svSjK7yHTBDNAag==
+react-native-syan-image-picker@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-syan-image-picker/-/react-native-syan-image-picker-0.3.0.tgz#f73170df1966698472d3fb04ecc247a06b116280"
+  integrity sha512-3yz2svd+nh4hnlAerh6ukKNgWaYp9a6XRuxuYi1fGZAOQPKimhuyogxSF5zXT/MXkp8cjN0piuS0F26D9z4Lew==
 
 react-native@0.57.7:
   version "0.57.7"

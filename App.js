@@ -29,7 +29,7 @@ export default class App extends Component<{}> {
     }
 
     handleOpenImagePicker = () => {
-        SYImagePicker.showImagePicker({imageCount: 1, isRecordSelected: true, isCrop: true, showCropCircle: true}, (err, photos) => {
+        SYImagePicker.showImagePicker({imageCount: 1, isRecordSelected: true, isCrop: false, showCropCircle: true}, (err, photos) => {
             console.log(err, photos);
             if (!err) {
                 this.setState({
