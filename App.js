@@ -93,6 +93,21 @@ export default class App extends Component<{}> {
         SYImagePicker.deleteCache()
     };
 
+    handleOpenVideoPicker = () => {
+        SYImagePicker.openVideoPicker({allowPickingMultipleVideo: false}, (err, res) => {
+            console.log(err, res);
+            if (!err) {
+                let photos = [...this.state.photos];
+                res.map(v => {
+                    photos.push({...v, uri: v.coverUri})
+                })
+                this.setState({
+                    photos
+                })
+            }
+        })
+    };
+
     render() {
 
         const {photos} = this.state;
@@ -104,6 +119,7 @@ export default class App extends Component<{}> {
                     <Button title={'选择照片(Async)'} onPress={this.handleAsyncSelectPhoto}/>
                     <Button title={'选择照片(Promise)带base64'} onPress={this.handlePromiseSelectPhoto}/>
                     <Button title={'缓存清除'} onPress={this.handleDeleteCache}/>
+                    <Button title={'选择视频'} onPress={this.handleOpenVideoPicker}/>
                 </View>
                 <ScrollView style={{flex: 1}} contentContainerStyle={styles.scroll}>
                     {photos.map((photo, index) => {

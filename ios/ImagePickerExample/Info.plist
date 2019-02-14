@@ -40,13 +40,10 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>NSAppTransportSecurity</key>
-	<!--See http://ste.vn/2015/06/10/configuring-app-transport-security-ios-9-osx-10-11/ -->
 	<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>localhost</key>
@@ -56,5 +53,13 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>访问相机以拍照</string>
+	<key>NSLocationWhenInUseUsageDescription - 2</key>
+	<string>允许定位以把位置保存到照片中</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>访问麦克风以录像</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>访问相册以选择照片</string>
 </dict>
 </plist>

@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "run-iOS": "react-native run-ios",
+    "run-android": "react-native run-android",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.7",
-    "react-native-syan-image-picker": "^0.3.0"
+    "react-native-syan-image-picker": "^0.3.2"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
