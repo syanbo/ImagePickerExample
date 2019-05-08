@@ -12,7 +12,8 @@ import {
     Image,
     ScrollView,
     TouchableOpacity,
-    Dimensions
+    Dimensions,
+    PermissionsAndroid
 } from 'react-native';
 
 import SYImagePicker from 'react-native-syan-image-picker'
@@ -28,13 +29,47 @@ export default class App extends Component<{}> {
         };
     }
 
+    requestPermission = async () => {
+        try {
+            const granted = await PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+                {
+                    title: '申请读写手机存储权限',
+                    message:
+                        '一个很牛逼的应用想借用你的摄像头，' +
+                        '然后你就可以拍出酷炫的皂片啦。',
+                    buttonNeutral: '等会再问我',
+                    buttonNegative: '不行',
+                    buttonPositive: '好吧',
+                },
+            );
+            if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+                console.log('现在你获得摄像头权限了');
+            } else {
+                console.log('用户并不给你');
+            }
+        } catch (err) {
+            console.warn(err);
+        }
+    };
+
     handleOpenImagePicker = () => {
-        SYImagePicker.showImagePicker({imageCount: 1, isRecordSelected: true, isCrop: false, showCropCircle: true}, (err, photos) => {
-            console.log(err, photos);
+        SYImagePicker.showImagePicker({
+            imageCount: 1,
+            isRecordSelected: true,
+            isCrop: true,
+            showCropCircle: true,
+            quality: 90,
+            compress: true,
+            enableBase64: true
+        }, (err, photos) => {
+            console.log('开启', err, photos);
             if (!err) {
                 this.setState({
                     photos
                 })
+            } else {
+                console.log(err)
             }
         })
     };
@@ -45,18 +80,20 @@ export default class App extends Component<{}> {
      * @returns {Promise<void>}
      */
     handleAsyncSelectPhoto = async () => {
-        SYImagePicker.removeAllPhoto()
+        // SYImagePicker.removeAllPhoto()
         try {
             const photos = await SYImagePicker.asyncShowImagePicker({
                 imageCount: 1,
                 isCrop: true,
                 showCropCircle: true
             });
+            console.log('关闭', photos);
             // 选择成功
             this.setState({
                 photos: [...this.state.photos, ...photos]
             })
         } catch (err) {
+            console.log(err)
             // 取消选择，err.message为"取消"
         }
     };
@@ -78,7 +115,8 @@ export default class App extends Component<{}> {
             })
     };
 
-    handleLaunchCamera = () => {
+    handleLaunchCamera = async () => {
+        await this.requestPermission()
         SYImagePicker.openCamera({isCrop: true, showCropCircle: true, showCropFrame: false}, (err, photos) => {
             console.log(err, photos);
             if (!err) {
@@ -115,8 +153,8 @@ export default class App extends Component<{}> {
             <View style={styles.container}>
                 <View style={styles.scroll}>
                     <Button title={'拍照'} onPress={this.handleLaunchCamera}/>
-                    <Button title={'选择照片'} onPress={this.handleOpenImagePicker}/>
-                    <Button title={'选择照片(Async)'} onPress={this.handleAsyncSelectPhoto}/>
+                    <Button title={'开启压缩'} onPress={this.handleOpenImagePicker}/>
+                    <Button title={'关闭压缩'} onPress={this.handleAsyncSelectPhoto}/>
                     <Button title={'选择照片(Promise)带base64'} onPress={this.handlePromiseSelectPhoto}/>
                     <Button title={'缓存清除'} onPress={this.handleDeleteCache}/>
                     <Button title={'选择视频'} onPress={this.handleOpenVideoPicker}/>

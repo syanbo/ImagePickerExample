@@ -6,12 +6,13 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "run-iOS": "react-native run-ios",
     "run-android": "react-native run-android",
+    "run-android-log": "react-native run-android && react-native log-android",
     "test": "jest"
   },
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.7",
-    "react-native-syan-image-picker": "^0.3.4"
+    "react-native-syan-image-picker": "^0.3.6"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
