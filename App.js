@@ -61,7 +61,7 @@ export default class App extends Component<{}> {
             showCropCircle: true,
             quality: 90,
             compress: true,
-            enableBase64: true
+            enableBase64: false
         }, (err, photos) => {
             console.log('开启', err, photos);
             if (!err) {
@@ -83,9 +83,8 @@ export default class App extends Component<{}> {
         // SYImagePicker.removeAllPhoto()
         try {
             const photos = await SYImagePicker.asyncShowImagePicker({
-                imageCount: 1,
-                isCrop: true,
-                showCropCircle: true
+                allowPickingOriginalPhoto: true,
+                isGif: true,
             });
             console.log('关闭', photos);
             // 选择成功
@@ -132,7 +131,7 @@ export default class App extends Component<{}> {
     };
 
     handleOpenVideoPicker = () => {
-        SYImagePicker.openVideoPicker({allowPickingMultipleVideo: false}, (err, res) => {
+        SYImagePicker.openVideoPicker({allowPickingMultipleVideo: true}, (err, res) => {
             console.log(err, res);
             if (!err) {
                 let photos = [...this.state.photos];
