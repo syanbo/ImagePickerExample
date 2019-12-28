@@ -83,8 +83,10 @@ export default class App extends Component<{}> {
         // SYImagePicker.removeAllPhoto()
         try {
             const photos = await SYImagePicker.asyncShowImagePicker({
-                allowPickingOriginalPhoto: true,
+                // allowPickingOriginalPhoto: true,
+                imageCount: 1,
                 isGif: true,
+                enableBase64: true,
             });
             console.log('关闭', photos);
             // 选择成功
@@ -98,11 +100,11 @@ export default class App extends Component<{}> {
     };
 
     handlePromiseSelectPhoto = () => {
-        SYImagePicker.asyncShowImagePicker({imageCount: 3, enableBase64: true})
+        SYImagePicker.asyncShowImagePicker({imageCount: 3})
             .then(photos => {
                 console.log(photos);
                 const arr = photos.map(v => {
-                    return {...v, enableBase64: true}
+                    return v
                 });
                 // 选择成功
                 this.setState({

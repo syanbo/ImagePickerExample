@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.7",
-    "react-native-syan-image-picker": "^0.3.9"
+    "react-native-syan-image-picker": "^0.4.3"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
